@@ -4,6 +4,7 @@ import sys
 import os
 from distutils.core import setup
 
+#检查python版本,bottle需python版本>=2.5
 if sys.version_info < (2,5):
     raise NotImplementedError("Sorry, you need at least Python 2.5 or Python 3.x to use bottle.")
 
@@ -14,6 +15,7 @@ except ImportError:
 
 # Ugly, but we can't import bottle with 3.x to read __version__ (throws SyntaxError)
 for line in open(os.path.join(os.path.dirname(sys.argv[0]),'bottle.py')):
+#获得版本值,以split划分,取划分后的最后一个值,即版本号
     if line.startswith('__version__'):
         version = eval(line.split('=')[-1])
 

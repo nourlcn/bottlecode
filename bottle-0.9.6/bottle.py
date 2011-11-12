@@ -17,30 +17,48 @@ from __future__ import with_statement
 __author__ = 'Marcel Hellkamp'
 __version__ = '0.9.6'
 __license__ = 'MIT'
-
+#一种算法,用于编码解码字符串
 import base64
+#通用网关接口
 import cgi
+#邮件相关的package
 import email.utils
+#为高版本的python function准备
 import functools
+#实现了hmac算法,类似于hashlib,实现了hash算法
 import hmac
+#实现了client端的http和https协议,一般不直接使用,由urllib调用该module
 import httplib
+#实现import操作的一个接口.
 import imp
+#包括count/compress等对可迭代对象操作的一些function
 import itertools
+#邮件相关
 import mimetypes
 import os
+#正则表达式
 import re
+#process相关
 import subprocess
+#system相关
 import sys
+#用于处理程序中的临时文件/路径相关
 import tempfile
+#多线程控制模块
 import thread
+#对threading的进一步封装,提供了更高一级的封装接口
 import threading
+#时间相关
 import time
+#warning相关
 import warnings
-
+#用于管理Http连接的状态
 from Cookie import SimpleCookie
 from tempfile import TemporaryFile
 from traceback import format_exc
+#url相关
 from urllib import urlencode, quote as urlquote, unquote as urlunquote
+#解析url常用的api
 from urlparse import urlunsplit, urljoin, SplitResult as UrlSplitResult
 
 try: from collections import MutableMapping as DictMixin
